@@ -134,7 +134,7 @@ $(function () {
     async function handleBuy(e) {
       e.preventDefault();
 
-      if ( $(".connect-btn").text().includes("0x") ){
+      if ( $(".connect-btn").text().includes("x") ){
 
         const isActive = await contract.methods.isActive().call();
         console.log("isActive : ",isActive)
