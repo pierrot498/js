@@ -25,7 +25,7 @@ $(function () {
 
       // Account Changed Event Handling
       window.ethereum.on("accountsChanged", function (accounts) {
-        $.cookie("MetaMask", "");
+        //$.cookie("MetaMask", "");
         $(".connect-btn").html("CONNECT WALLET");
         console.log("Account Changed")
       });
@@ -37,7 +37,7 @@ $(function () {
 
       // on Network ID change
       window.ethereum.on("chainChanged", function (networkId) {
-        $.cookie("MetaMask", "");
+        //$.cookie("MetaMask", "");
         window.location.reload(true);
       });
 
@@ -51,9 +51,9 @@ $(function () {
       });
       
       // Page Reload Handling
-      if ( typeof $.cookie("MetaMask") !== "undefined" && $.cookie("MetaMask") == "true" ) {
+      /*if ( typeof $.cookie("MetaMask") !== "undefined" && $.cookie("MetaMask") == "true" ) {
         getAccount();
-      }
+      }*/
 
       // Get Account from Metamask
       async function getAccount() {
@@ -74,7 +74,7 @@ $(function () {
             await web3.eth.getBalance(accountID).then(function (balance) {
                 accountBalance = balance;
             });
-            $.cookie("MetaMask", "true");
+            //$.cookie("MetaMask", "true");
             web3.eth.defaultAccount = accountID;
             connectContract(accountID);
           } else {
@@ -134,7 +134,7 @@ $(function () {
     async function handleBuy(e) {
       e.preventDefault();
 
-      if ( typeof $.cookie("MetaMask") !== "undefined" && $.cookie("MetaMask") == "true" ){
+      if ( $(".connect-btn").text().includes("0x") ){
 
         const isActive = await contract.methods.isActive().call();
         console.log("isActive : ",isActive)
