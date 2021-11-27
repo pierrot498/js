@@ -301,6 +301,11 @@ const abi = [
         "internalType": "uint256",
         "name": "_numOfTokens",
         "type": "uint256"
+      },
+      {
+        "internalType":"bytes32[]",
+        "name":"_proof",
+        "type":"bytes32[]"
       }
     ],
     "name": "mintNFTDuringPresale",
