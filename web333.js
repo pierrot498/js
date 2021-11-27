@@ -1,6 +1,6 @@
 var accountID, networkId, web3, NFT_QNT, isPresaleActive, contract, nftPrice, totalSupply;
 
-var contractAddress = "0x7aa48e3212f56c388b35281e4f205418d1db3d68"; //mainnet updated contract
+var contractAddress = "0x541DE74ee286e1960c58974bbdcA5b7B7AA9638D"; //mainnet updated contract
 
 var nftPriceInEthGb = 0.0;
 function sleep(ms) {
@@ -69,7 +69,7 @@ $(function () {
             networkId = id;
           });
           
-          if (networkId == 1) {
+          if (networkId == 4) {
             $(".connect-btn").html( accountID.substring(1, 9) + "..." + accountID.substring(accountID.length - 6));
             await web3.eth.getBalance(accountID).then(function (balance) {
                 accountBalance = balance;
