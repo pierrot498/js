@@ -154,7 +154,8 @@ $(function () {
             } else if (totalSupply >= max_nft) {
               alert("Sold out!");
             } else {
-              await contract.methods.mintNFTDuringPresale(noOfTokens).send({ from: accountID, value: value1 * noOfTokens })
+              const proof = await GetMerkleProof(accountID);
+              await contract.methods.mintNFTDuringPresale(noOfTokens,proof).send({ from: accountID, value: value1 * noOfTokens })
               .on("receipt", function (res) {
                 alert("Transaction successful");
                 location.reload();
