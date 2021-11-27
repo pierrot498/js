@@ -120,9 +120,9 @@ $(function () {
        
         progress = (totalSupply * 100) / max_nft;
         progress2 = progress.toFixed(2);
-        document.getElementById("file").value = progress2;
-        document.getElementById("progressPercent").innerHTML = progress2 + "%";
-        document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
+       // document.getElementById("file").value = progress2;
+        //document.getElementById("progressPercent").innerHTML = progress2 + "%";
+        //document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
         totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
       }
