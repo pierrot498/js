@@ -45,9 +45,9 @@ $(function () {
       $(document).on("click", "#connectServer", function (e) {       
         e.preventDefault();
         getAccount();
-      }).on("click", "#golemInpt", function(e){
+      }).on("click", ".nft-item", function(e){
         e.preventDefault();
-        NFT_QNT = parseInt($(this)[0].value);
+        NFT_QNT = parseInt($("#golemInpt")[0].value);
       });
       
       // Page Reload Handling
