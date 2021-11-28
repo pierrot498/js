@@ -124,7 +124,7 @@ $(function () {
         //document.getElementById("progressPercent").innerHTML = progress2 + "%";
         document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
-        totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
+        totalSupply = parseInt(await contract.methods.totalSupply().call())//+180;
       }
     }
 
