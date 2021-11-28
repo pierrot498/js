@@ -88,9 +88,9 @@ $(function () {
     async function connectContract(accountID) {
 
       contract = new web3.eth.Contract(abi, contractAddress);
-      var max_nft = parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
+      var max_nft = 8888;//parseInt(await contract.methods.MAX_NFT_PUBLIC().call())+180;
       console.log("max_nft",max_nft)
-      totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
+      totalSupply = parseInt(await contract.methods.totalSupply().call())//+180;
       console.log("totalSupply",totalSupply)
       var buyLimit = await contract.methods.BUY_LIMIT_PER_TX().call();
       var isActive = await contract.methods.isActive().call();
@@ -122,7 +122,7 @@ $(function () {
         progress2 = progress.toFixed(2);
        // document.getElementById("file").value = progress2;
         //document.getElementById("progressPercent").innerHTML = progress2 + "%";
-        //document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
+        document.getElementById("max_nft").innerHTML = totalSupply + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
         totalSupply = parseInt(await contract.methods.totalSupply().call())+180;
       }
