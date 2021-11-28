@@ -1,7 +1,7 @@
 var accountID, networkId, web3, NFT_QNT, isPresaleActive, contract, nftPrice, totalSupply;
 
 var contractAddress = "0x541DE74ee286e1960c58974bbdcA5b7B7AA9638D"; //mainnet updated contract
-
+NFT_QNT=2;
 var nftPriceInEthGb = 0.0;
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
