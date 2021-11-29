@@ -69,7 +69,7 @@ $(function () {
             networkId = id;
           });
           
-          if (networkId == 4) {
+          if (networkId == 1) {
             $(".connect-btn").html( accountID.substring(1, 9) + "..." + accountID.substring(accountID.length - 6));
             await web3.eth.getBalance(accountID).then(function (balance) {
                 accountBalance = balance;
