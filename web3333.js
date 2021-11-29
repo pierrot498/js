@@ -1,6 +1,6 @@
 var accountID, networkId, web3, NFT_QNT, isPresaleActive, contract, nftPrice, totalSupply;
 
-var contractAddress = "0xCF8bEd0a3F91C721039f09138b46242DEe2A7fAa"; //mainnet updated contract
+var contractAddress = "0x79181C32D5539d18F239Ed9ab304132478845631"; //mainnet updated contract
 NFT_QNT=2;
 var nftPriceInEthGb = 0.0;
 function sleep(ms) {
