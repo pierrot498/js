@@ -122,7 +122,7 @@ $(function () {
         progress2 = progress.toFixed(2);
        // document.getElementById("file").value = progress2;
         //document.getElementById("progressPercent").innerHTML = progress2 + "%";
-        totalsupply = totalsupply>601?totalsupply:601
+        totalSupply = totalSupply>601?totalSupply:601
         document.getElementById("max_nft").innerHTML = totalSupply-601 + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
         totalSupply = parseInt(await contract.methods.totalSupply().call());
