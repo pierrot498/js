@@ -159,7 +159,7 @@ $(function () {
               await contract.methods.mintNFTDuringPresale(noOfTokens,proof).send({ from: accountID, value: value1 * noOfTokens })
               .on("receipt", function (res) {
                 alert("Transaction successful");
-                location.reload();
+                //location.reload();
               }).on("error", function (err) {
                 alert("Transaction Error");
               });
@@ -179,7 +179,7 @@ $(function () {
               await contract.methods.mintNFT(noOfTokens).send({ from: accountID, value: value1 * noOfTokens })
               .on("receipt", function (res) {
                 alert("Transaction successful");
-                location.reload();
+              //  location.reload();
               }).on("error", function (err) {
                 alert("Transaction Error");
               });
