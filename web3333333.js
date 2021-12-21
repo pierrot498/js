@@ -125,7 +125,7 @@ $(function () {
         totalsupply = totalsupply>601?totalsupply:601
         document.getElementById("max_nft").innerHTML = totalSupply-601 + " / "+max_nft; //+ max_nft ;
         await sleep(2000);
-        totalSupply = parseInt(await contract.methods.totalSupply().call())+200;
+        totalSupply = parseInt(await contract.methods.totalSupply().call());
       }
     }
 
